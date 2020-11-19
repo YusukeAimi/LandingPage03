@@ -1,0 +1,702 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-padding-top: 70px;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color:#333333;
+}
+a, p {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-decoration: none;
+  color: #333333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.pc {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+/***************header***************/
+
+header {
+  width: 100%;
+  height: 94px;
+  position: fixed;
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: #FFFFFF;
+  opacity: 1;
+  z-index: 2;
+}
+
+.header-inner {
+  margin: 0 auto;
+  max-width: 1022px;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.header-ttl {
+  display: flex;
+  margin: auto 0 auto 20px;
+}
+.header-ttl img {
+  width: 47px;
+  height: 47px;
+  margin-right: 16px;
+}
+.header-ttl p {
+  margin: auto 0;
+  font: bold 24px/41px Hiragino Kaku Gothic ProN;
+}
+
+.header-menu {
+  display: block;
+  margin: auto;
+}
+.header-menu ul{
+  display: flex;
+}
+.header-menu li {
+  margin-right: 46px;
+}
+.header-menu a {
+  font: bold 16px/27px Hiragino Kaku Gothic ProN;
+}
+.header-menu li:last-child{
+  margin-right: 0;
+}
+
+.header-form {
+  margin: auto 21px auto auto;
+}
+.form-button {
+  color: #FFFFFF;
+  font: bold 14px/14px Hiragino Kaku Gothic ProN;
+  padding: 11px 36px 12px 35px;
+  background: transparent linear-gradient(90deg, #FA41CC 0%, #6020B0 100%) 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+}
+
+/***************hamburger***************/
+
+.hamburger {
+  display : none;
+  position: absolute;
+  right : 20px;
+  width : 40px;
+  cursor: pointer;
+}
+.ham_line {
+  display : block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  margin: 0 5px;
+  background: #333333;
+  transition: 0.3s ease-in-out;
+}
+.ham_line1 {
+  top: 36px;
+}
+.ham_line2 {
+  top: 46px;
+}
+.ham_line3 {
+  top: 56px;
+}
+
+.globalMenu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 94px;
+  background: transparent linear-gradient(90deg, #FA41CC 0%, #6020B0 100%) 0% 0% no-repeat padding-box;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+.globalMenu ul {
+  width: 100%;
+}
+.globalMenu li {
+  margin: 20px 0;
+  width: 100%;
+}
+.globalMenu a {
+  padding: 4px;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .header-menu li {
+    margin-right: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+  .header-ttl p {
+    margin: auto 0;
+    font: bold 20px/32px Hiragino Kaku Gothic ProN;
+  }
+  .header-form {
+    display: none;
+  }
+  .hamburger {
+    display : block;
+  }
+  .globalMenu {
+    display: block;
+  }
+}
+
+/***************main***************/
+
+.main {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-image: url(img/circle.png);
+  background-repeat: no-repeat;
+  background-position: top -30px right -85px;
+}
+.inner {
+  margin: 0 auto;
+  max-width: 1022px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/***************mv***************/
+
+.mv {
+  width: 100%;
+  height: 674px;
+  padding-top: 94px;
+}
+.mv-inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1022px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.mv-content {
+  margin-left: 20px;
+}
+.mv-content h2 {
+  margin-top: 168px;
+  font: bold 32px/54px Hiragino Kaku Gothic ProN;
+}
+.mv-content h3 {
+  margin-top: 38px;
+  font: bold 16px/27px Hiragino Kaku Gothic ProN;
+}
+.mv-form {
+  margin-top: 39px;
+  display: inline-block;
+}
+.mv-img {
+  margin: 131px 0px auto auto;
+}
+
+@media (max-width: 1024px) {
+  .mv-content h2 {
+    font: bold 28px/48px Hiragino Kaku Gothic ProN;
+  }
+  .mv-content h3 {
+    font: bold 14px/24px Hiragino Kaku Gothic ProN;
+  }
+  .mv-img {
+    margin: 131px 20px auto auto;
+  }
+  .inner {
+    margin: 0 auto;
+    max-width: 1022px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .mv {
+    height: auto;
+    padding-top: 94px;
+  }
+  .mv-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .mv-img {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .mv-content {
+    width: 100%;
+    margin: 0;
+  }
+  .mv-content h2 {
+    margin: 0;
+    font: bold 24px/48px Hiragino Kaku Gothic ProN;
+  }
+  .mv-content h3 {
+    margin-top: 30px;
+  }
+}
+
+/***************features***************/
+
+#features {
+  width: 100%;
+  height: auto;
+}
+.section-ttl {
+  display: inline-block;
+  margin-top: 55px;
+  font: bold 32px/54px Hiragino Kaku Gothic ProN;
+}
+.eng {
+  margin-top: 20px;
+  font: bold 16px/27px Hiragino Kaku Gothic ProN;
+}
+.sky-color {
+  color: #3BA6C9;
+}
+
+.features-container {
+  margin-top: 67px;
+  margin-bottom: 157px;
+}
+.features-block {
+  display: flex;
+  text-align: left;
+}
+
+#features h3 {
+  font: bold 28px/48px Hiragino Kaku Gothic ProN;
+  margin-bottom: 54px;
+}
+.features-txt h4 {
+  font: bold 24px/48px Hiragino Kaku Gothic ProN;
+  margin-bottom: 54px;
+}
+.features-txt p {
+  font: bold 16px/26px Hiragino Kaku Gothic ProN;
+}
+
+.features-img {
+  margin: auto 0;
+}
+.features-block-left {
+  margin-right: 150px;
+}
+
+@media (max-width: 1024px) {
+  .features-block-left {
+    margin-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .features-block {
+    text-align: center;
+    flex-direction: column;
+  }
+  .features-img {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .features02 {
+    flex-direction: column-reverse;
+  }
+  .features-block-left {
+    margin-right: 0;
+  }
+}
+
+/***************price***************/
+
+#price {
+  width: 100%;
+  height: auto;
+  background: #EEFBFB 0% 0% no-repeat padding-box;
+}
+#price table {
+  max-width: 926px;
+  border-collapse: collapse;
+  margin: 73px auto 41px auto;
+  box-shadow: 0px 3px 6px #00000029;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+#price tr {
+  padding: 40px 0 40px 19px;
+  text-align: left;
+}
+#price th,
+#price td {
+  text-align: left;
+  border: 1px solid #E5E5E5;
+  font: bold 16px/28px Hiragino Kaku Gothic ProN;
+  white-space: nowrap;
+}
+
+#price th {
+  width: auto;
+  padding: 35px 35px 35px 20px;
+}
+#price td {
+  width: 100%;
+  padding: 35px 0 35px 30px;
+}
+.price-txt {
+  display: inline-block;
+  margin-bottom: 68px;
+}
+.price-txt p {
+  font: bold 16px/26px Noto Sans JP;
+}
+
+@media (max-width: 1024px) {
+  #price th,
+  #price td {
+    white-space: normal;
+  }
+}
+@media (max-width: 425px) {
+  #price th,
+  #price td {
+    text-align: left;
+    font: bold 14px/20px Hiragino Kaku Gothic ProN;
+    white-space: normal;
+  }
+  #price th {
+    width: auto;
+    padding: 15px;
+  }
+  #price td {
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+  }  
+  #price-txt p {
+    font: bold 14px/20px Noto Sans JP;
+  }
+}
+
+/***************FAQ***************/
+.accordion {
+  width: 100%;
+  margin: 32px auto 86px auto;
+}
+.accordion-click {
+  border: 1px solid #E5E5E5;
+} 
+.accordion-click p {
+  font: bold 14px/26px Noto Sans JP;
+  color: #333333;
+  cursor: pointer;
+  padding: 18px;
+}
+.accordion-content01,
+.accordion-content02,
+.accordion-content03 {
+  background: #F2F2F2 0% 0% no-repeat padding-box;
+  border: 1px solid #E5E5E5;
+}
+.accordion-content01 p,
+.accordion-content02 p,
+.accordion-content03 p {
+  text-align: left;
+  font: bold 14px/26px Noto Sans JP;
+  color: #444444;
+  padding: 18px;
+}
+
+/***************blog***************/
+
+#blog {
+  width: 100%;
+  height: auto;
+  background: #EEFBFB 0% 0% no-repeat padding-box;
+}
+.blog-block {
+  display: flex;
+  margin-top: 54px;
+  padding-bottom: 91px;
+}
+.blog-box {
+  display: block;
+  width: 389px;
+  height: 387px;
+  margin: 0 15px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  position: relative;
+}
+.blog-ttl {
+  padding: 20px;
+}
+.blog-ttl h2 {
+  text-align: left;
+  font: bold 18px/26px Noto Sans JP;
+}
+.blog-ttl time {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font: normal normal bold 16px/26px Noto Sans JP;
+}
+
+@media (max-width: 1024px) {
+  
+}
+@media (max-width: 768px) {
+  .blog-block {
+    flex-direction: column;
+  }
+  .blog-box {
+    width: auto;
+    max-width: 389px;
+    height: auto;
+    margin: 20px auto;
+  }
+  .blog-ttl h2 {
+    font: bold 16px/24px Noto Sans JP;
+    padding-bottom: 30px;
+  }
+  .blog-ttl time {
+    font: normal normal bold 12px/22px Noto Sans JP;
+  }
+}
+
+/***************works***************/
+
+#works {
+  width: 100%;
+  height: auto;
+}
+.swiper-container {
+  width: 100%;
+  height: auto;
+  margin-top: 54px;
+  margin-bottom: 91px;
+  padding: 0 10px;
+}
+.swiper-wrapper {
+  height: 100%;
+  width: auto;
+  display: flex;
+  padding: 10px 0;
+}
+.swiper-slide {
+  display: block;
+  width: 300px;
+  height: auto;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  position: relative;
+}
+.works-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.works-img img {
+  object-fit: cover;
+  width: 300px;
+  height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+.works-txt {
+  padding: 20px;
+  text-align: left;
+  height: 100%;
+}
+.works-txt h2 {
+  font: bold 18px/26px Noto Sans JP;
+  margin-bottom: 26px;
+  height: 72px;
+}
+.works-txt p {
+  font: normal normal bold 16px/26px Noto Sans JP;
+}
+.swiper-pagination {
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .works-txt h2 {
+    font: bold 14px/20px Noto Sans JP;
+    margin-bottom: 20px;
+  }
+  .works-txt p {
+    font: normal normal bold 12px/18px Noto Sans JP;
+  }
+}
+@media (max-width: 768px) {
+  .works-img img {
+    width: 100%;
+  }
+}
+
+/***************contact***************/
+
+#contact {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  background: transparent linear-gradient(90deg, #05A5FA 0%, #63FBD7 100%, #67FFD6 100%) 0% 0% no-repeat padding-box;
+}
+.white {
+  color: #FFFFFF;
+}
+.contact-txt {
+  margin: 36px 0;
+  font: bold 16px/24px Noto Sans JP;
+}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 908px;
+  height: auto;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 70px;
+}
+
+label {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  text-align: left;
+  font: bold 16px/26px Noto Sans JP;
+}
+input,
+textarea {
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  background: #EEFBFB 0% 0% no-repeat padding-box;
+  font: bold 16px/26px Noto Sans JP;
+  margin: 0 60px;
+  resize: none;
+}
+.attention {
+  color: #FFFFFF;
+  margin-left: 30px;
+  background: #0C449B 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  padding: 4px 15px 6px;
+}
+.check-form {
+  display: inline-block;
+  margin: 30px;
+}
+.check-form p {
+  font: bold 16px/24px Noto Sans JP;
+}
+.contact-button {
+  margin: 0 auto 50px auto;
+  width: 200px;
+  color: #FFFFFF;
+  font: bold 14px/14px Hiragino Kaku Gothic ProN;
+  padding: 11px 36px 12px 35px;
+  background: transparent linear-gradient(90deg, #FA41CC 0%, #6020B0 100%) 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  
+}
+@media (max-width: 768px) {
+  label {
+    margin-left: 30px;
+    font: bold 14px/22px Noto Sans JP;
+  }
+  input,
+  textarea {
+    font: bold 14px/22px Noto Sans JP;
+    margin: 0 30px;
+  }
+  .attention {
+    margin-left: 20px;
+  }
+  .check-form p {
+    font: bold 12px/20px Noto Sans JP;
+  }
+  .contact-button {
+    width: 150px;
+  }
+}
+
+/***************footer***************/
+
+footer {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  background: #F8F8F8 0% 0% no-repeat padding-box;
+}
+.footer-contents {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.footer-contents h2 {
+  margin-bottom: 20px;
+  font: bold 24px/28px Noto Sans JP;
+}
+.footer-txt {
+  display: flex;
+  justify-content: center;
+}
+.footer-contents p {
+  margin: 0 20px;
+  font: normal normal bold 16px/28px Noto Sans JP;
+}
+.copyright {
+  margin: 50px 0;
+}
+.copyright p {
+  font: bold 14px/20px Noto Sans JP;
+}
+
+@media (max-width: 1024px) {
+  
+}
+@media (max-width: 768px) {
+  .footer-txt {
+    display: block;
+  }
+  .footer-contents p {
+    margin: 20px 0;
+    font: normal normal bold 16px/28px Noto Sans JP;
+  }
+}
